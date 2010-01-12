@@ -1,0 +1,5 @@
+# MonoDevelop Droppings
+test-results/
+bin/
+*.pidb
+*.userprefs

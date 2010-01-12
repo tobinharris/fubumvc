@@ -130,7 +130,7 @@ namespace HtmlTags
             string key = Guid.NewGuid().ToString();
             _head.Add("script").Attr("type", "text/javascript").Text(key);
 
-            _alterations.Add(html => html.Replace(key, "\n" + javascript + "\n"));
+            _alterations.Add(html => html.Replace(key, Environment.NewLine + javascript + Environment.NewLine));
         }
 
         public void ReferenceJavaScriptFile(string path)

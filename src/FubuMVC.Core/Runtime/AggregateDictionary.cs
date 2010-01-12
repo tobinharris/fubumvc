@@ -51,7 +51,7 @@ namespace FubuMVC.Core.Runtime
             HttpRequestBase request = @base.Request;
 
             AddLocator(RequestDataSource.Request, key => request[key]);
-            AddLocator(RequestDataSource.File, key => request.Files[key]);
+            if(Type.GetType("Mono.Runtime") == null) AddLocator(RequestDataSource.File, key => request.Files[key]);
             AddLocator(RequestDataSource.Header, key => request.Headers[key]);
         }
 

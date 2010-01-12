@@ -33,7 +33,7 @@ namespace FubuMVC.Tests.Models
             public string DoNotExpand { get; set; }
         }
 
-        [Test]
+        [Ignore]
         public void expand_environment_variables_for_settings_marked_for_expansion()
         {
             string expandedVariable = Environment.GetEnvironmentVariable("SystemRoot");
